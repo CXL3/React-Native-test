@@ -33,7 +33,7 @@ const FlexboxNavigator = createStackNavigator(
       headerStyle: {
         backgroundColor: "#5637DD",
       },
-      headerTintColor: "#fff",
+      headerTintColor: "#00000",
       headerTitleStyle: {
         color: "#fff",
       },
