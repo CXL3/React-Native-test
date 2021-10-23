@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { Card } from "react-native-elements";
 import { CAMPSITES } from '../shared/campsites';
@@ -22,13 +22,15 @@ class CampsiteInfo extends Component {
             campsites: CAMPSITES
         };
     }
-
+    //Set the tile of the screen
     static navigationOptions = {
         title: 'Campsite Information'
     }
 
     render() {
+        // accessed the id that was clicked on the directory component
         const campsiteId = this.props.navigation.getParam('campsiteId');
+        // getting that array under the id clicked
         const campsite = this.state.campsites.filter(campsite => campsite.id === campsiteId)[0];
         return <RenderCampsite campsite={campsite} />;
     }

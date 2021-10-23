@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Directory from "./DirectoryComponent";
-import CampsiteInfo from "./CampsiteInfoComponent";
+import CampsiteInfo from "./CampsiteInfoComponent"
 import Constants from 'expo-constants';
 import { View, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -27,7 +27,7 @@ const DirectoryNavigator = createStackNavigator(
 
 const AppNavigator = createAppContainer(DirectoryNavigator);
 
-class Main extends Component {
+class Main extends Component{
   render() {
       return (
           <View
