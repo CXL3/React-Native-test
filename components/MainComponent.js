@@ -1,32 +1,48 @@
 import React, { Component } from "react";
-import  Flexbox from "./FlexboxConponent";
+import Flexbox from "./FlexboxComponent";
 import Home from "./HomeComponent";
+import Style from "./StyleSheet";
 import Constants from "expo-constants";
 import { View, Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 const HomeNavigator = createStackNavigator(
-    {
-        Home: { screen: Home }
+  {
+    Home: { screen: Home },
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#5637DD",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
     },
-    {
-        defaultNavigationOptions: {
-            headerStyle: {
-                backgroundColor: '#5637DD'
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-                color: '#fff'
-            }
-        }
-    }
+  }
+);
+const StyleNavigator = createStackNavigator(
+  {
+    Home: { screen: Style },
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#5637DD",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
 );
 
 const FlexboxNavigator = createStackNavigator(
   {
-   
-    Flexbox: { screen: Flexbox }
+    Flexbox: { screen: Flexbox },
   },
   {
     defaultNavigationOptions: {
@@ -44,7 +60,8 @@ const FlexboxNavigator = createStackNavigator(
 const MainDrawerNavigator = createDrawerNavigator(
   {
     Home: { screen: HomeNavigator },
-    Flexbox: { screen: FlexboxNavigator }
+    Flexbox: { screen: FlexboxNavigator },
+    Style: { screen: Style },
   },
   {
     drawerBackgroundColor: "#fffff",
