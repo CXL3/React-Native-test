@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Flexbox from "./FlexboxComponent";
-import Home from "./Flatlist";
+import Home from "./DirectoryComponent";
 import Style from "./StyleSheet";
 import Constants from "expo-constants";
 import { View, Platform } from "react-native";
