@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class Home extends Component {
+class List extends Component {
 
     static navigationOptions = {
         title: 'Home'
@@ -16,4 +16,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default List;
