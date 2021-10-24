@@ -1,7 +1,7 @@
 export const CAMPSITES = [
     {
         id: 0,
-        name: "React Lake Campground",
+        name: "BMW X5",
         image: "/assets/images/bmw1.jpg",
         elevation: 1233,
         featured: false,
@@ -9,7 +9,7 @@ export const CAMPSITES = [
     },
     {
         id: 1,
-        name:"Chrome River Campground ",
+        name:"BMW M3 ",
         image: "/assets/images/bmw2.jpg",
         elevation: 877,
         featured: false,
@@ -17,7 +17,7 @@ export const CAMPSITES = [
     },
     {
         id: 2,
-        name:"Breadcrumb Trail Campground",
+        name:"BMW M8",
         image: "/assets/images/bmw3.jpg",
         elevation: 2901,
         featured: false,
@@ -25,7 +25,7 @@ export const CAMPSITES = [
     },
     {
         id: 3,
-        name:"Redux Woods Campground",
+        name:"BMW Z4",
         image: "/assets/images/bmw1.jpg",
         elevation: 42,
         featured: true,
