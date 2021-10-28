@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { FlatList } from "react-native";
 import { ListItem } from "react-native-elements";
 import { CAMPSITES } from "../shared/campsites";
+import * as Animatable from 'react-native-animatable';
+
 //Flatlist and ListItem
 class Directory extends Component {
   constructor(props) {
@@ -35,11 +37,13 @@ class Directory extends Component {
     };
 
     return (
+    
       <FlatList
         data={this.state.campsites}
         renderItem={renderDirectoryItem}
         keyExtractor={(item) => item.id.toString()}
       />
+     
     );
   }
 }

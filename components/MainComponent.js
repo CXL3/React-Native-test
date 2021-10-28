@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Home from "./HomeComponent";
 import Directory from "./DirectoryComponent";
 import CampsiteInfo from "./CampsiteInfoComponent";
+import Reservation from "./Form";
 import Constants from "expo-constants";
 import {
   View,
@@ -74,6 +75,30 @@ const HomeNavigator = createStackNavigator(
     }),
   }
 );
+const ReservationNavigator = createStackNavigator(
+  {
+    Reservation: { screen: Reservation },
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: "#5637DD",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+      headerLeft: (
+        <Icon
+          name="tree"
+          type="font-awesome"
+          iconStyle={styles.stackIcon}
+          onPress={() => navigation.toggleDrawer()}
+        />
+      ),
+    }),
+  }
+);
 
 const CustomDrawerContentComponent = (props) => (
   <ScrollView>
@@ -115,6 +140,15 @@ const MainNavigator = createDrawerNavigator(
         ),
       },
     },
+    Reservation: {
+      screen: ReservationNavigator,
+      navigationOptions: {
+        drawerLabel: "Buy one today!",
+        drawerIcon: ({ tintColor }) => (
+          <Icon name="tree" type="font-awesome" size={24} color={tintColor} />
+        ),
+      },
+    },
   },
   {
     drawerBackgroundColor: "#ffffff",
@@ -132,6 +166,7 @@ class Main extends Component {
         style={{
           flex: 1,
           paddingTop: Platform.OS === "ios" ? 0 : Constants.statusBarHeight,
+          
         }}
       >
         <AppNavigator />

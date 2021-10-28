@@ -6,8 +6,10 @@ export const COMMENTS =
         rating: 5, 
         text: "What a magnificent view!",
         author: "Tinus Lorvaldes",
-        date: "2018-10-25T16:30Z"
+        date: "2018-10-25T16:30Z",
+        inService: true
     },
+     
     {
         id: 1,
         campsiteId: 0,

@@ -3,6 +3,7 @@ import { Text, View, ScrollView, FlatList } from "react-native";
 import { Card, Icon } from "react-native-elements";
 import { CAMPSITES } from "../shared/campsites";
 import { COMMENTS } from "../shared/comments";
+import * as Animatable from "react-native-animatable";
 
 // render Card
 
@@ -14,8 +15,8 @@ function RenderCampsite(props) {
       <Card featuredTitle={campsite.name} image={require("./images/bmw2.jpg")}>
         <Text style={{ margin: 10 }}>{campsite.description}</Text>
         <Icon
-        //name='heart-o' 
-        // use tenary operator , if favorite is true, solid heart, if not outline version
+          //name='heart-o'
+          // use tenary operator , if favorite is true, solid heart, if not outline version
           name={props.favorite ? "heart" : "heart-o"}
           type="font-awesome"
           color="#f50"
@@ -70,7 +71,7 @@ class CampsiteInfo extends Component {
   }
   //Set the tile of the screen
   static navigationOptions = {
-    title: "Campsite Information",
+    title: "",
   };
 
   // event handlers to toggle the favorite property to true
